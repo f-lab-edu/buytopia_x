@@ -2,6 +2,7 @@ package com.zeroskill.buytopia.dto.request;
 
 import com.zeroskill.buytopia.dto.AddressDto;
 import com.zeroskill.buytopia.dto.MemberDto;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -19,6 +20,7 @@ public record MemberRegistrationRequest(
         @NotBlank(message = "비밀번호는 필수입니다.")
         String password,
 
+        @Valid
         AddressDto address
 ) {
         public static MemberDto toMemberDto(MemberRegistrationRequest request) {
