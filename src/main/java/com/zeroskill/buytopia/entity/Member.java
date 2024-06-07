@@ -3,12 +3,10 @@ package com.zeroskill.buytopia.entity;
 import com.zeroskill.buytopia.dto.MemberDto;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 @Getter
 @Entity
-@NoArgsConstructor
 public class Member {
 
     @Id
