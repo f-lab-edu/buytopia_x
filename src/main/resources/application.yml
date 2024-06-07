@@ -1,0 +1,30 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: buytopia
+  datasource:
+    url: jdbc:mysql://localhost:3306/buytopia
+    username: root
+    password: zeroskill2400
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+#      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type: trace
